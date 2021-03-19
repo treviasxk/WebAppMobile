@@ -20,5 +20,5 @@ function BackPage(){
     document.getElementsByClassName('Content')[0].classList.toggle('SlideRight');
     setTimeout(function() {
         window.history.back();
-    }, 200);
+    }, 180);
 }

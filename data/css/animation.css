@@ -1,0 +1,25 @@
+.SlideLeft {
+    animation: slideLeft 0.2s linear;
+}
+
+.SlideRight {
+    animation: slideRight 0.2s linear;
+}
+
+@keyframes slideRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}

@@ -5,24 +5,28 @@
         <title>Web App Mobile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
         <link type="text/css" rel="stylesheet" href="data/css/main.css"/>
+        <link type="text/css" rel="stylesheet" href="data/css/animation.css"/>
+        <link type="text/css" rel="stylesheet" href="data/css/layout.css"/>
         <script type="text/javascript" src="data/js/main.js"></script>
     </head>
     <body>
-        <div class="Content">
-            <div class="Card">
-                <div class="titulo">Sobre os lobos</div>
-                <img title="Lobo" src="https://media.tenor.co/images/1a12fab4926a32ddb33f7d42e9e0b8de/raw" draggable="false"/>
-                <p>O lobo é uma espécie de mamífero canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás. É o maior membro remanescente selvagem da família canidae. O sequenciamento de DNA e estudos genéticos reafirmam que o lobo-cinzento é ancestral do cão doméstico, contudo alguns aspectos desta afirmação têm sido questionados recentemente. Uma série de outras subespécies do lobo-cinzento foram identificadas, embora o número real de subespécies ainda esteja em discussão. <br/><a href="page/pop.html">Ver mais</a>.</p>
-                <hr/>
-                <div class="CardDateTime">13:46 18/03/2021</div>
-            </div>
-        </div>
         <div class="AppBar">
             <p>Web App Mobile</p>
             <div class="OpenMenu" onclick="OpenNavigation(true);"></div>
         </div>
         <div id="Navigate">
             <div class="CloseMenu" onclick="OpenNavigation(false);">&#8249;</div>
+        </div>
+        <div class="Content" onclick="OpenNavigation(false);">
+            <div class="Card">
+                <div class="titulo">Sobre os lobos</div>
+                <img title="Lobo" src="https://media.tenor.co/images/1a12fab4926a32ddb33f7d42e9e0b8de/raw" draggable="false"/>
+                <p>O lobo é uma espécie de mamífero canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás. É o maior membro remanescente selvagem da família canidae. O sequenciamento de DNA e estudos genéticos reafirmam que o lobo-cinzento é ancestral do cão doméstico, contudo alguns aspectos desta afirmação têm sido questionados recentemente. Uma série de outras subespécies do lobo-cinzento foram identificadas, embora o número real de subespécies ainda esteja em discussão.
+                    <br/>
+                    <a href="page/pop.html">Ver mais</a></p>
+                <hr/>
+                <div class="CardDateTime">13:46 18/03/2021</div>
+            </div>
         </div>
     </body>
 </html>
