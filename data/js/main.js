@@ -15,3 +15,10 @@ function OpenNavigation(Open){
         document.body.style.overflow = "hidden";
     }
 }
+
+function BackPage(){
+    document.getElementsByClassName('Content')[0].classList.toggle('SlideRight');
+    setTimeout(function() {
+        window.history.back();
+    }, 200);
+}

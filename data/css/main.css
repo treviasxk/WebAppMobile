@@ -1,7 +1,26 @@
 body {
+    user-select: none;
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+/*Layout principal*/
+.AppBar {
+    display:table-header-group;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    color: #FFFFFF;
+    background-color: dodgerblue;
+    box-shadow: 0px 0px 5px #000000;
+}
+.AppBar > p {
+    text-align: center;
+    font-weight: bold;
+}
 .Content {
     display: table;
     margin: 0px auto;
@@ -10,27 +29,63 @@ body {
     left: 0px;
 }
 
-.ButtonComment {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    display:inline-block;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    background: url("/webappmobile/data/img/icons.png") -75px 0px;
+
+/*Animações*/
+.SlideLeft {
+    animation: slideLeft 0.2s linear;
 }
-.ButtonLike {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    display:inline-block;
-    margin: 0px;
+
+.SlideRight {
+    animation: slideRight 0.2s linear;
+}
+
+@keyframes slideRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}
+
+/*Botões*/
+.BackPage{
     cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 13px;
     width: 25px;
     height: 25px;
     background: url("/webappmobile/data/img/icons.png") -25px 0px;
 }
-.ButtonLike:hover {
-    background: url("/webappmobile/data/img/icons.png") -50px 0px;
+.CloseMenu {
+    position: absolute;
+    padding: 15px;
+    left: 0px;
+    top: -10px;
+    cursor: pointer;
+    font-size: 50px;
+}
+.OpenMenu {
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    width: 25px;
+    height: 25px;
+    background: url("/webappmobile/data/img/icons.png") 0px 0px;
 }
 
+/*Layout básico*/
 .Card {
     max-width: 600px;
     border-radius: 5px;
@@ -39,7 +94,6 @@ body {
     margin: 10px 0px;
     box-shadow: 0px 0px 5px #d4d4d4;
 }
-
 .Card > img {
     width: 100%;
     height: auto;
@@ -50,9 +104,12 @@ body {
     text-align: justify;
     margin: 0px;
 }
-
 .Card > .titulo {
     font-weight: bold;
+}
+.CardDateTime {
+    text-align: right;
+    color: #999999;
 }
 
 #Navigate {
@@ -67,7 +124,6 @@ body {
     background: #FFFFFF;
     transition: 0.2s linear;
 }
-
 #Navigate > ul > li {
     position: relative;
     border-radius: 10px;
@@ -77,42 +133,4 @@ body {
     width: 50%;
     color: white;
     background: #000000;
-}
-
-.CloseMenu {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    position: absolute;
-    padding: 15px;
-    left: 0px;
-    top: -10px;
-    cursor: pointer;
-    font-size: 50px;
-}
-
-.OpenMenu {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    cursor: pointer;
-    position: absolute;
-    left: 15px;
-    top: 13px;
-    width: 25px;
-    height: 25px;
-    background: url("/webappmobile/data/img/icons.png") 0px 0px;
-}
-
-.AppBar {
-    display:table-header-group;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 50px;
-    color: #FFFFFF;
-    background-color: dodgerblue;
-    box-shadow: 0px 0px 5px #000000;
-}
-
-.AppBar > p {
-    text-align: center;
-    font-weight: bold;
 }
