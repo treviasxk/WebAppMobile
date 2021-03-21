@@ -1,6 +1,8 @@
 # WebAppMobile
  Projeto totalmente construído em HTML5+CSS3+JavaScript com visual básico de aplicativo para smartphones, o layout também possui compatibilidade com desktop.
 
+ ![Preview](data/img/preview.gif)
+
  ## Vantagens
  * Organizado
  * Simples
@@ -8,5 +10,3 @@
 
  ## Teste demo
  [WebAppMobile Demo](https://treviasxk.github.io/WebAppMobile/)
-
- ![Preview](data/img/preview.gif)
