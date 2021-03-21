@@ -9,4 +9,4 @@
  ## Teste demo
  [WebAppMobile Demo](https://treviasxk.github.io/WebAppMobile/)
 
- ![Preview](https://treviasxk.github.io/WebAppMobile/data/img/preview.gif)
+ ![Preview](data/img/preview.gif)
