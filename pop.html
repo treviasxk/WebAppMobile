@@ -8,10 +8,13 @@
         <link type="text/css" rel="stylesheet" href="data/css/layout.css"/>
         <script type="text/javascript" src="data/js/main.js"></script>
     </head>
-    <body>
+    <body onload="CloseScreenLoading();">
         <div class="AppBar" id="ok">
             <p>Sobre os lobos</p>
             <div class="BackPage" onclick="BackPage();"></div>
+        </div>
+        <div id="ScreenLoading">
+            <div class="ContentScreenLoading"><img src="data/img/loading.gif" width="200" height="200"/></div>
         </div>
         <div class="Content SlideLeft">
             <div class="Card">

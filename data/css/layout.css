@@ -1,13 +1,30 @@
 body {
+    overflow: hidden;
     user-select: none;
-    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /*Layout principal*/
-.AppBar {
+#ScreenLoading {
+    display: table;
     z-index: 1;
+    position: fixed;
+    left:0px;
+    top:50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    text-align: center;
+    background-color: #FFFFFF;
+}
+#ScreenLoading > .ContentScreenLoading {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.AppBar {
+    z-index: 2;
     display:table-header-group;
     position: fixed;
     left: 0px;
@@ -25,7 +42,7 @@ body {
 }
 
 #Navigate {
-    z-index: 2;
+    z-index: 3;
     display: table;
     text-align: center;
     margin: 0px auto;
