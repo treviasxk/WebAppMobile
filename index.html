@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Web App Mobile</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-        <link rel="manifest" href="data/json/manifest.json">
+        <link rel="webmanifest" href="data/json/manifest.json"/>
         <link type="text/css" rel="stylesheet" href="data/css/main.css"/>
         <link type="text/css" rel="stylesheet" href="data/css/animation.css"/>
         <link type="text/css" rel="stylesheet" href="data/css/layout.css"/>
+        <link rel="icon" href="data/img/favicon.ico"/>
         <script type="text/javascript" src="data/js/main.js"></script>
     </head>
     <body onload="CloseScreenLoading();">
-        <div class="AppBar">
+        <div id="AppBar">
             <p>Web App Mobile</p>
             <div class="OpenMenu" onclick="OpenNavigation(true);"></div>
         </div>
         <div id="ScreenLoading">
-            <div class="ContentScreenLoading"><img src="data/img/loading.gif" width="125" height="125"/></div>
+            <div class="ContentScreenLoading"><img src="data/img/loading.gif" width="125" height="125" alt="Carregando..."/></div>
         </div>
         <div id="Navigate">
             <div class="CloseMenu" onclick="OpenNavigation(false);">&#8249;</div>
         </div>
-        <div class="Content" onclick="OpenNavigation(false);">
+        <div id="Content" onclick="OpenNavigation(false);">
+            <div class="Card">
+                <div class="titulo">Web App Mobile</div>
+                <img title="Lobo" src="data/img/Logo.png" alt="Lobo" draggable="false"/>
+                <p>É um projeto simples de web app mobile, as páginas foram feito com HTML5 + CSS3 + JavaScript, e o designer foi construído com um visual adptativo para smartphones e tablets.</p>
+                <hr/>
+                <div class="CardDateTime">11:50 10/07/2021</div>
+            </div>
             <div class="Card">
                 <div class="titulo">Sobre os lobos</div>
-                <img title="Lobo" src="https://media.tenor.co/images/1a12fab4926a32ddb33f7d42e9e0b8de/raw" draggable="false"/>
+                <img title="Lobo" src="https://media.tenor.co/images/1a12fab4926a32ddb33f7d42e9e0b8de/raw" alt="Lobo" draggable="false"/>
                 <p>O lobo é uma espécie de mamífero canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás. É o maior membro remanescente selvagem da família canidae. O sequenciamento de DNA e estudos genéticos reafirmam que o lobo-cinzento é ancestral do cão doméstico, contudo alguns aspectos desta afirmação têm sido questionados recentemente. Uma série de outras subespécies do lobo-cinzento foram identificadas, embora o número real de subespécies ainda esteja em discussão.
                     <br/>
                     <a href="pop.html">Ver mais</a></p>
