@@ -10,7 +10,7 @@ Projeto simples de web app mobile, páginas feito com HTML5+CSS3+JavaScript e co
  * Animação ao mudar de página.
  * Tela de carregamento.
  * Manifest de aplicativo adicionado.
- * Suporte a movimento swipe mobile
+ * Suporte a movimento swipe mobile.
 
  ## Teste Demo
  [Web App Mobile Demo](https://treviasxk.github.io/WebAppMobile/)

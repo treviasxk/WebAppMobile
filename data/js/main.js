@@ -68,7 +68,7 @@ function swipedetect(el, callback){
         allowedTime = 200,
         elapsedTime,
         startTime,
-        handleswipe = callback || function(swipedir){}
+        handleswipe = callback //|| function(swipedir){}
       
         touchsurface.addEventListener('touchstart', (e) => {
             var touchobj = e.changedTouches[0]
