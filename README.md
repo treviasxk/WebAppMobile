@@ -6,7 +6,7 @@ Projeto simples de web app mobile, páginas feito com HTML5+CSS3+JavaScript e co
 
 ## Tema Escuro
 O Tema é ativado quando o dispositivo android ativa o modo dark do sistema.
- ![Preview](data/img/preview2.gif)
+ ![Preview](data/img/preview.png)
 
 
  ## Vantagens
