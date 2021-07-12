@@ -1,13 +1,36 @@
+/*Layout principal*/
+:root {
+    --PrimaryColor: #1E90FF;
+    --SegundaryColor: #03498f;
+    --ShadowColor: #999999;
+    --AppBarText: #FFFFFF;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 2px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #1E90FF; 
+    background: var(--PrimaryColor);
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        --TextColor: #000000;
+        --Theme: #FFFFFF;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --TextColor: #FFFFFF;
+        --Theme: #000000;
+    }
+}
 
 body {
+    background: var(--Theme);
+    color: var(--TextColor);
+    
     overflow: hidden;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -16,7 +39,6 @@ body {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/*Layout principal*/
 #ScreenLoading {
     display: table;
     z-index: 1;
@@ -26,7 +48,7 @@ body {
     width: 100%;
     height: calc(100% - 50px);
     text-align: center;
-    background-color: #FFFFFF;
+    background-color: var(--Theme);
 }
 #ScreenLoading > .ContentScreenLoading {
     display: table-cell;
@@ -40,9 +62,9 @@ body {
     top: 0px;
     width: 100%;
     height: 50px;
-    color: #FFFFFF;
-    background-color: dodgerblue;
-    box-shadow: 0px 0px 5px #000000;
+    color: var(--AppBarText);
+    background-color: var(--PrimaryColor);
+    box-shadow: 0px 0px 5px var(--ShadowColor);
     transition: top 0.3s;
 }
 #AppBar > p {
@@ -59,18 +81,9 @@ body {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: #FFFFFF;
+    color: var(--TextColor);
+    background: var(--Theme);
     transition: 0.2s linear;
-}
-#Navigate > ul > li {
-    position: relative;
-    border-radius: 10px;
-    margin: 10px 0px;
-    padding: 10px;
-    left: calc(25% - 25px);
-    width: 50%;
-    color: white;
-    background: #000000;
 }
 #Content {
     z-index: 0;
@@ -79,7 +92,6 @@ body {
     position: relative;
     margin-top: 50px;
     left: 0px;
-
 }
 .Card {
     max-width: 600px;
@@ -87,7 +99,7 @@ body {
     padding: 10px;
     width: calc(100% - 20px);
     margin: 10px 0px;
-    box-shadow: 0px 0px 5px #d4d4d4;
+    box-shadow: 0px 0px 5px var(--ShadowColor);
 }
 
 /*Botões*/
