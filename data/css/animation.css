@@ -1,9 +1,9 @@
 .SlideLeft {
-    animation: slideLeft 0.2s linear;
+    animation: slideLeft 0.4s linear;
 }
 
 .SlideRight {
-    animation: slideRight 0.2s linear;
+    animation: slideRight 0.4s linear;
 }
 
 @keyframes slideRight {
