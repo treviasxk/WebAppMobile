@@ -104,7 +104,7 @@ window.onscroll = () => {
         if (prevScrollpos >= currentScrollPos || prevScrollpos == 0) {
             document.getElementById("AppBar").style.top = "0";
         } else {
-            document.getElementById("AppBar").style.top = "-50px";
+            document.getElementById("AppBar").style.top = "-55px";
         }
         prevScrollpos = currentScrollPos;
     }
