@@ -92,6 +92,7 @@ body {
     position: relative;
     margin-top: 50px;
     left: 0px;
+    transition: 0.2s linear;
 }
 .Card {
     max-width: 600px;

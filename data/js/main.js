@@ -27,7 +27,7 @@ function CloseScreenLoading(){
 
 //Volta a página com animação
 function BackPage(){
-    document.getElementsByClassName('SlideLeft')[0].classList.toggle('SlideRight');
+    Content.style.left = "100%";
     setTimeout(function() {
         window.history.back();
     }, 200);
