@@ -1,4 +1,8 @@
 /*Layout básico*/
+.Feed {
+    display: table;
+    margin: 0px auto;;
+}
 .Card {
     max-width: 600px;
     border-radius: 5px;
