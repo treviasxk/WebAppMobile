@@ -6,14 +6,6 @@
     --AppBarText: #FFFFFF;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 2px;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--PrimaryColor);
-}
-
 @media (prefers-color-scheme: light) {
     body {
         --TextColor: #000000;
@@ -25,6 +17,20 @@
         --TextColor: #FFFFFF;
         --Theme: #000000;
     }
+}
+
+::-webkit-scrollbar {
+    scroll-margin-top: 50px;
+    width: 5px;
+    background: var(--Theme);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--PrimaryColor);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--SegundaryColor);
 }
 
 body {
@@ -56,7 +62,7 @@ body {
 }
 #AppBar {
     z-index: 2;
-    display:table-header-group;
+    display: table-header-group;
     position: fixed;
     left: 0px;
     top: 0px;
@@ -67,9 +73,15 @@ body {
     box-shadow: 0px 0px 5px var(--ShadowColor);
     transition: top 0.3s;
 }
-#AppBar > p {
-    text-align: center;
+
+#AppBar > div {
+    display: table-cell;
+    vertical-align: middle;
     font-weight: bold;
+    height: inherit;
+}
+#AppBar > .Middle {
+    width: 100%;
 }
 #Navigate {
     z-index: 3;
@@ -79,41 +91,32 @@ body {
     position: fixed;
     left: -100%;
     top: 0px;
-    width: 100%;
+    width: 85%;
     height: 100%;
     color: var(--TextColor);
     background: var(--Theme);
     transition: 0.2s linear;
 }
 #Content {
+    position: relative;
     z-index: 0;
     display: table;
     margin: 0px auto;
-    position: relative;
     margin-top: 50px;
     left: 0px;
     transition: 0.2s linear;
 }
-.Card {
-    max-width: 600px;
-    border-radius: 5px;
-    padding: 10px;
-    width: calc(100% - 20px);
-    margin: 10px 0px;
-    box-shadow: 0px 0px 5px var(--ShadowColor);
-}
+
 
 /*Botões*/
-.BackPage {
+#BackPage {
     cursor: pointer;
-    position: absolute;
-    left: 15px;
-    top: 13px;
+    margin: 0px 10px;
     width: 25px;
     height: 25px;
     background: url("/data/img/icons.png") -25px 0px;
 }
-.CloseMenu {
+#CloseMenu {
     position: absolute;
     padding: 15px;
     left: 0px;
@@ -121,11 +124,9 @@ body {
     cursor: pointer;
     font-size: 50px;
 }
-.OpenMenu {
+#OpenMenu {
     cursor: pointer;
-    position: absolute;
-    left: 15px;
-    top: 13px;
+    margin: 0px 10px;
     width: 25px;
     height: 25px;
     background: url("/data/img/icons.png") 0px 0px;

@@ -10,18 +10,20 @@
         <link rel="icon" href="data/img/favicon.ico"/>
         <script type="text/javascript" src="data/js/main.js"></script>
     </head>
-    <body onload="CloseScreenLoading();">
+    <body>
         <div id="AppBar">
-            <p>Web App Mobile</p>
-            <div class="OpenMenu" onclick="OpenNavigation(true);"></div>
+            <div>
+                <div id="OpenMenu"></div>
+            </div>
+            <div class="Middle">Web App Mobile</div>
         </div>
         <div id="ScreenLoading">
             <div class="ContentScreenLoading"><img src="data/img/loading.gif" width="125" height="125" alt="Carregando..."/></div>
         </div>
         <div id="Navigate">
-            <div class="CloseMenu" onclick="OpenNavigation(false);">&#8249;</div>
+
         </div>
-        <div id="Content" onclick="OpenNavigation(false);">
+        <div id="Content">
             <div class="Card">
                 <div class="titulo">Web App Mobile</div>
                 <img title="Lobo" src="data/img/logo.png" alt="Lobo" draggable="false"/>

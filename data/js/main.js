@@ -1,10 +1,56 @@
 var Loading = true;
+
+window.addEventListener('load', () => {
+    CloseScreenLoading();
+    
+    //Configurações Swipe
+    var content = document.getElementById('Content');
+    if(document.body.contains(document.getElementById('Navigate'))){
+        document.getElementById("OpenMenu").onclick = function() {
+            OpenNavigation(true);
+        };
+        document.getElementById("Content").onclick = function() {
+            OpenNavigation(false);
+        };
+
+
+        swipedetect(content, (swipedir) => {
+            if (swipedir =='right')
+                OpenNavigation(true);
+        });
+        var navigate = document.getElementById('Navigate')
+        swipedetect(navigate, (swipedir) => {
+            if (swipedir =='left')
+                OpenNavigation(false);
+        });
+    } else {
+        document.getElementById("BackPage").onclick = function() {
+            BackPage();
+        };
+        
+        swipedetect(content, (swipedir) => {
+            if (swipedir =='right')
+                BackPage();
+        });
+    }
+});
+
+function BackPage(){
+    Content.style.left = "100%";
+    setTimeout(function() {
+        window.history.back();
+    }, 200);
+}
+
+
 //Fechar ou abrir menu lateral
 function OpenNavigation(Open){
     if(Open == false){
         Navigate.style.left = "0px";
+        Content.style.opacity = "1";
     }else{
         Navigate.style.left = "-100%";
+        Content.style.opacity = "0.5";
     }
     
     if(Navigate.style.left == "0px"){
@@ -18,42 +64,15 @@ function OpenNavigation(Open){
     }
 }
 
+
+
+
 //Fechar tela de carregamento
 function CloseScreenLoading(){
     Loading = false;
     document.body.style.overflowY = "visible";
     ScreenLoading.style.display = "none";
 }
-
-//Volta a página com animação
-function BackPage(){
-    Content.style.left = "100%";
-    setTimeout(function() {
-        window.history.back();
-    }, 200);
-}
-
-
-//Configurações Swipe
-window.addEventListener('load', () => {
-    var content = document.getElementById('Content');
-    if(document.body.contains(document.getElementById('Navigate'))){
-        swipedetect(content, (swipedir) => {
-            if (swipedir =='right')
-                OpenNavigation(true);
-        });
-        var navigate = document.getElementById('Navigate')
-        swipedetect(navigate, (swipedir) => {
-            if (swipedir =='left')
-                OpenNavigation(false);
-        });
-    } else {
-        swipedetect(content, (swipedir) => {
-            if (swipedir =='right')
-                BackPage();
-        });
-    }
-});
 
 //Função pra detectar ação swipe
 function swipedetect(el, callback){
@@ -68,7 +87,7 @@ function swipedetect(el, callback){
         allowedTime = 200,
         elapsedTime,
         startTime,
-        handleswipe = callback //|| function(swipedir){}
+        handleswipe = callback
       
         touchsurface.addEventListener('touchstart', (e) => {
             var touchobj = e.changedTouches[0]
