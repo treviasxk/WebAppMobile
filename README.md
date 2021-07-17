@@ -6,7 +6,7 @@ Projeto simples de web app mobile, páginas feito com HTML5+CSS3+JavaScript e co
  ![Preview](data/img/preview.png)
  
  ## Vantagens
- Versão 1.3 (BETA)
+ Versão 1.3
  * Programado de forma organizado.
  * Código simples e fácil de editar.
  * Animação ao mudar de página.
