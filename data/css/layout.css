@@ -92,6 +92,7 @@ body {
     height: 100%;
     color: var(--TextColor);
     background: var(--Theme);
+    box-shadow: 0px 0px 5px var(--ShadowColor);
     transition: 0.2s linear;
 }
 #Content {

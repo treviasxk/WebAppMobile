@@ -48,7 +48,7 @@ function OpenNavigation(Open){
         document.getElementById("AppBar").style.top = "0px";
     }else{
         Navigate.style.left = "-100%";
-        Content.style.opacity = "0.5";
+        Content.style.opacity = "0.2";
         document.getElementById("AppBar").style.top = "-55px";
     }
     
