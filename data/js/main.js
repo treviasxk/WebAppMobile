@@ -1,10 +1,8 @@
 var Loading = true;
-
 window.addEventListener('load', () => {
-    Content.style.left = "0px";
     CloseScreenLoading();
     var content = document.getElementById('Content');
-    if(document.body.contains(document.getElementById('Navigate'))){
+    if(!document.body.contains(document.getElementById('BackPage'))){
         document.getElementById("OpenMenu").onclick = function() {
             OpenNavigation(true);
         };
@@ -21,7 +19,7 @@ window.addEventListener('load', () => {
             if (swipedir =='left')
                 OpenNavigation(false);
         });
-    } else {
+    }else{
         document.getElementById("BackPage").onclick = function() {
             BackPage();
         };
@@ -31,11 +29,16 @@ window.addEventListener('load', () => {
                 BackPage();
         });
     }
+    if(document.body.contains(document.getElementById('SignIn')))
+    document.getElementById("SignIn").onclick = function() {
+        window.location.href="login.html";
+    };
 });
 
 function BackPage(){
-    Content.style.left = "200%";
+    document.getElementById("Content").classList.add("SlideRight");
     setTimeout(function() {
+        //location.href='/';
         window.history.back();
     }, 200);
 }
@@ -45,11 +48,12 @@ function OpenNavigation(Open){
     if(Open == false){
         Navigate.style.left = "0px";
         Content.style.opacity = null;
-        document.getElementById("AppBar").style.top = "0px";
+        document.getElementById("AppBar").style.marginTop = "0px";
+
     }else{
         Navigate.style.left = "-100%";
         Content.style.opacity = "0.2";
-        document.getElementById("AppBar").style.top = "-55px";
+        document.getElementById("AppBar").style.marginTop = "-50px";
     }
     
     if(Navigate.style.left == "0px"){
@@ -115,14 +119,13 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = () => {
     if(Loading == false){
         var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos >= currentScrollPos || prevScrollpos == 0) {
-            document.getElementById("AppBar").style.top = "0";
-        } else {
-            document.getElementById("AppBar").style.top = "-55px";
-        }
+        if(prevScrollpos >= currentScrollPos || prevScrollpos == 0)
+            document.getElementById("AppBar").style.marginTop = "0px";
+        else
+            document.getElementById("AppBar").style.marginTop = "-50px";
         prevScrollpos = currentScrollPos;
     }
     else{
-        document.getElementById("AppBar").style.top = "0";
+        document.getElementById("AppBar").style.marginTop = "0";
     }
 }
