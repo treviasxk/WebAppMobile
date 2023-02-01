@@ -30,3 +30,41 @@
     text-align: right;
     color: #999999;
 }
+
+.FullScreen{
+    display: table;
+    position: absolute;
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: calc(100% - 100px);
+}
+
+.FullScreen > form{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+form{
+    text-align: center;
+}
+form > input, form > select{
+    background-color: var(--BackgroundColor);
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px;
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    border: 1px solid var(--ShadowColor);
+    color: var(--TextColor);
+    border-radius: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    color: var(--AppBarText);
+    background-color: var(--PrimaryColor);
+}
