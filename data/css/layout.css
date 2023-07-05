@@ -36,7 +36,7 @@
 body {
     background: var(--BackgroundColor);
     color: var(--TextColor);
-    overflow-x: hidden;
+    overflow: hidden;
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
